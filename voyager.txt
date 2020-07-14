@@ -34,11 +34,11 @@ smix 3 4 1 50 0 -1
 
 # feature
 feature -CURRENT_METER
+feature -AIRMODE
 feature THR_VBAT_COMP
 feature MOTOR_STOP
 feature GPS
 feature PWM_OUTPUT_ENABLE
-feature FW_LAUNCH
 
 # beeper
 
@@ -58,10 +58,14 @@ serial 2 2048 115200 115200 0 115200
 aux 0 0 0 1300 2100
 aux 1 1 5 1150 1250
 aux 2 3 5 1350 1450
-aux 3 12 0 1700 2100
-aux 4 37 1 1300 2100
-aux 5 21 3 1300 2100
-aux 6 13 4 1700 2100
+aux 3 10 5 1950 2100
+aux 4 10 3 1300 2100
+aux 5 31 5 1550 1650
+aux 6 45 5 1150 1250
+aux 7 12 0 1750 1850
+aux 8 36 0 1700 2100
+aux 9 37 1 1300 2100
+aux 10 13 4 1700 2100
 
 # adjrange
 
@@ -110,9 +114,14 @@ set accgain_y = 3956
 set accgain_z = 4086
 set align_mag = CW270FLIP
 set mag_hardware = QMC5883
+set magzero_x = 31
+set magzero_y = -301
+set magzero_z = -456
 set baro_hardware = BMP280
 set pitot_hardware = NONE
 set serialrx_provider = CRSF
+set motor_pwm_rate = 4000
+set motor_pwm_protocol = DSHOT150
 set failsafe_procedure = RTH
 set platform_type = AIRPLANE
 set model_preview_type = 8
@@ -124,6 +133,10 @@ set nav_extra_arming_safety = OFF
 set nav_min_rth_distance = 5000
 set nav_rth_allow_landing = NEVER
 set nav_rth_altitude = 5000
+set nav_fw_launch_velocity = 200
+set nav_fw_launch_motor_delay = 100
+set nav_fw_launch_timeout = 10000
+set nav_fw_launch_climb_angle = 20
 set osd_video_system = NTSC
 set osd_left_sidebar_scroll = ALTITUDE
 set osd_right_sidebar_scroll = GROUND_SPEED
