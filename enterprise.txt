@@ -86,7 +86,7 @@
     100,
     100
   ],
-  "ver": 125,
+  "ver": 126,
   "reverseMotors": 1,
   "launchMode": 0,
   "A_P": 4,
@@ -151,6 +151,6 @@
   "rthHoverThrottle": 0,
   "rthMaxThrottle": 0,
   "rthMinThrottle": 0,
-  "rthHomeAction": 1,
+  "rthHomeAction": 129,
   "rthReturnSpeed": 50
 }
