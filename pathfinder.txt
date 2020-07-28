@@ -72,7 +72,7 @@ osd_layout 0 1 0 12 V
 osd_layout 0 3 8 6 H
 osd_layout 0 4 8 6 H
 osd_layout 0 7 0 0 V
-osd_layout 0 8 8 12 V
+osd_layout 0 8 9 12 V
 osd_layout 0 9 1 2 H
 osd_layout 0 11 1 9 V
 osd_layout 0 12 0 11 V
@@ -81,8 +81,8 @@ osd_layout 0 14 25 0 V
 osd_layout 0 15 25 10 V
 osd_layout 0 20 10 0 V
 osd_layout 0 21 10 1 V
-osd_layout 0 22 13 10 V
-osd_layout 0 23 11 11 V
+osd_layout 0 22 14 10 V
+osd_layout 0 23 12 11 V
 osd_layout 0 24 12 2 V
 osd_layout 0 26 25 8 V
 osd_layout 0 28 23 12 V
@@ -112,9 +112,9 @@ set accgain_y = 4066
 set accgain_z = 4031
 set align_mag = CW270FLIP
 set mag_hardware = QMC5883
-set magzero_x = 260
-set magzero_y = -67
-set magzero_z = -763
+set magzero_x = 295
+set magzero_y = 405
+set magzero_z = 43
 set baro_hardware = BMP280
 set pitot_hardware = NONE
 set min_check = 1050
