@@ -181,11 +181,12 @@ set yaw_rate = 60
 # battery_profile
 battery_profile 1
 
-set vbat_min_cell_voltage = 290
+set bat_cells = 4
+set vbat_min_cell_voltage = 300
 set vbat_warning_cell_voltage = 300
-set battery_capacity = 3000
-set battery_capacity_warning = 900
-set battery_capacity_critical = 300
+set battery_capacity = 6000
+set battery_capacity_warning = 1800
+set battery_capacity_critical = 600
 
 # end the command batch
 batch end
