@@ -1,18 +1,18 @@
 {
   "G_P": [
-    4,
-    6.1,
-    8.2
+    3,
+    3,
+    8
   ],
   "G_I": [
-    0.057,
-    0.07,
-    0.055
+    0.035,
+    0.035,
+    0.05
   ],
   "G_D": [
-    8.7,
-    10.7,
-    0
+    10,
+    10,
+    5
   ],
   "ACCtrim": [
     0,
@@ -39,9 +39,9 @@
     0
   ],
   "TPA": [
-    0.44,
+    0.4,
     0.2,
-    0.2
+    0.4
   ],
   "RGB": [
     0,
@@ -55,7 +55,7 @@
   ],
   "AUX": [
     20,
-    35,
+    0,
     67,
     0,
     0,
@@ -67,7 +67,7 @@
     0,
     0,
     0,
-    37
+    36
   ],
   "DB": [
     0,
@@ -75,8 +75,8 @@
     0
   ],
   "NFE": [
-    0,
-    0
+    1,
+    1
   ],
   "NFCF": [
     200,
@@ -126,12 +126,12 @@
   "vtxChannel": 32,
   "vbatAlarm": 21.2,
   "debugVariables": 0,
-  "mahAlarm": 1100,
+  "mahAlarm": 900,
   "lipoConnected": 0,
   "lapTimerTypeAndInterface": 0,
   "lapTimerTransponderId": 0,
   "loggerDebugVariables": 0,
-  "YawCfilter": 35,
+  "YawCfilter": 40,
   "vtxType": 0,
   "vtxPowerLow": 25,
   "vtxPowerHigh": 200,
@@ -149,8 +149,8 @@
   "rthHomeAltitude": 10,
   "rthDescentRadius": 200,
   "rthHoverThrottle": 0,
-  "rthMaxThrottle": 0,
+  "rthMaxThrottle": 1600,
   "rthMinThrottle": 0,
   "rthHomeAction": 129,
-  "rthReturnSpeed": 50
+  "rthReturnSpeed": 40
 }
