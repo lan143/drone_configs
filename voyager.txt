@@ -1,7 +1,7 @@
 # diff
 
 # version
-# INAV/MATEKF722 2.5.1 Jun 16 2020 / 12:44:34 (098a574b3)
+# INAV/MATEKF405SE 2.5.2 Aug  4 2020 / 10:24:57 (faaedc7cb)
 # GCC-9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
 
 # start the command batch
@@ -33,7 +33,6 @@ smix 3 4 1 50 0 -1
 # gf
 
 # feature
-feature -CURRENT_METER
 feature -AIRMODE
 feature THR_VBAT_COMP
 feature MOTOR_STOP
@@ -45,8 +44,8 @@ feature PWM_OUTPUT_ENABLE
 # map
 
 # serial
-serial 0 2 115200 115200 0 115200
-serial 2 2048 115200 115200 0 115200
+serial 3 2048 115200 115200 0 115200
+serial 4 2 115200 115200 0 115200
 
 # led
 
@@ -55,15 +54,15 @@ serial 2 2048 115200 115200 0 115200
 # mode_color
 
 # aux
-aux 0 0 0 1300 2100
-aux 1 1 5 1150 1450
-aux 2 3 5 1350 1650
-aux 3 10 3 1300 2100
-aux 4 45 5 1550 1650
-aux 5 12 0 1750 1850
-aux 6 36 5 1950 2100
-aux 7 37 1 1400 1625
-aux 8 21 1 1900 2100
+aux 0 0 0 1300 2075
+aux 1 1 5 1150 1250
+aux 2 3 5 1350 1450
+aux 3 3 5 1550 1650
+aux 4 10 3 1300 1700
+aux 5 45 5 1550 1650
+aux 6 36 6 1300 2100
+aux 7 37 1 1300 1700
+aux 8 21 1 1700 2100
 aux 9 13 4 1700 2100
 
 # adjrange
@@ -83,7 +82,7 @@ osd_layout 0 7 0 0 V
 osd_layout 0 8 11 11 V
 osd_layout 0 9 1 2 H
 osd_layout 0 11 1 8 V
-osd_layout 0 12 1 10 V
+osd_layout 0 12 0 10 V
 osd_layout 0 13 25 8 V
 osd_layout 0 14 25 0 V
 osd_layout 0 15 25 9 V
@@ -105,25 +104,24 @@ osd_layout 0 97 9 3 H
 # master
 set gyro_hardware_lpf = 256HZ
 set gyro_lpf_hz = 40
-set acc_hardware = MPU6500
-set acczero_x = 16
-set acczero_y = -86
-set acczero_z = -38
-set accgain_x = 4245
-set accgain_y = 3956
-set accgain_z = 4086
+set acc_hardware = MPU6000
+set acc_lpf_hz = 102
+set acczero_x = 91
+set acczero_y = -8
+set acczero_z = -401
+set accgain_x = 4083
+set accgain_y = 4104
+set accgain_z = 3994
 set align_mag = CW270FLIP
 set mag_hardware = QMC5883
-set magzero_x = 31
-set magzero_y = -301
-set magzero_z = -456
+set magzero_z = -1
 set baro_hardware = BMP280
 set pitot_hardware = NONE
 set serialrx_provider = CRSF
 set motor_pwm_rate = 4000
 set motor_pwm_protocol = DSHOT150
 set failsafe_procedure = RTH
-set platform_type = AIRPLANE
+set align_board_yaw = 2700
 set model_preview_type = 8
 set small_angle = 180
 set applied_defaults = 3
@@ -138,11 +136,10 @@ set nav_fw_launch_motor_delay = 100
 set nav_fw_launch_timeout = 10000
 set nav_fw_launch_climb_angle = 20
 set osd_video_system = NTSC
-set osd_left_sidebar_scroll = ALTITUDE
-set osd_right_sidebar_scroll = GROUND_SPEED
 set i2c_speed = 800KHZ
 set name = Voyager
 set vtx_band = 5
+set vtx_channel = 4
 set vtx_power = 5
 set vtx_low_power_disarm = UNTIL_FIRST_ARM
 
@@ -156,6 +153,7 @@ set fw_p_roll = 6
 set fw_i_roll = 6
 set fw_ff_roll = 49
 set yaw_lpf_hz = 30
+set heading_hold_rate_limit = 101
 set tpa_rate = 20
 set tpa_breakpoint = 1600
 set roll_rate = 28
@@ -164,9 +162,11 @@ set pitch_rate = 14
 # battery_profile
 battery_profile 1
 
+set vbat_min_cell_voltage = 250
+set vbat_warning_cell_voltage = 280
 set battery_capacity = 3000
-set battery_capacity_warning = 1500
-set battery_capacity_critical = 600
+set battery_capacity_warning = 2100
+set battery_capacity_critical = 2700
 
 # end the command batch
 batch end
