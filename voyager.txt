@@ -115,8 +115,10 @@ set accgain_x = 4083
 set accgain_y = 4104
 set accgain_z = 3994
 set align_mag = CW270FLIP
-set mag_hardware = QMC5883
-set magzero_z = -1
+set mag_hardware = NONE
+set magzero_x = 7
+set magzero_y = -181
+set magzero_z = -636
 set baro_hardware = BMP280
 set pitot_hardware = NONE
 set serialrx_provider = CRSF
@@ -124,6 +126,7 @@ set motor_pwm_rate = 4000
 set motor_pwm_protocol = DSHOT150
 set failsafe_procedure = RTH
 set align_board_yaw = 2700
+set current_meter_scale = 294
 set model_preview_type = 8
 set small_angle = 180
 set applied_defaults = 3
@@ -167,8 +170,8 @@ battery_profile 1
 set vbat_min_cell_voltage = 250
 set vbat_warning_cell_voltage = 280
 set battery_capacity = 3000
-set battery_capacity_warning = 2100
-set battery_capacity_critical = 2700
+set battery_capacity_warning = 900
+set battery_capacity_critical = 300
 
 # end the command batch
 batch end
