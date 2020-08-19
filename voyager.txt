@@ -156,12 +156,12 @@ set vtx_low_power_disarm = UNTIL_FIRST_ARM
 # profile
 profile 1
 
-set fw_p_pitch = 6
-set fw_i_pitch = 9
-set fw_ff_pitch = 52
-set fw_p_roll = 6
-set fw_i_roll = 6
-set fw_ff_roll = 49
+set fw_p_pitch = 8
+set fw_i_pitch = 18
+set fw_ff_pitch = 84
+set fw_p_roll = 4
+set fw_i_roll = 9
+set fw_ff_roll = 40
 set yaw_lpf_hz = 30
 set heading_hold_rate_limit = 101
 set tpa_rate = 20
