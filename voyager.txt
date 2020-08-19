@@ -101,6 +101,7 @@ osd_layout 0 33 0 7 V
 osd_layout 0 35 0 9 V
 osd_layout 0 40 24 10 V
 osd_layout 0 50 2 4 H
+osd_layout 0 96 25 6 V
 osd_layout 0 97 9 3 H
 
 # master
@@ -136,11 +137,15 @@ set nav_extra_arming_safety = OFF
 set nav_min_rth_distance = 5000
 set nav_rth_allow_landing = NEVER
 set nav_rth_altitude = 5000
+set nav_fw_cruise_thr = 1500
 set nav_fw_launch_velocity = 200
 set nav_fw_launch_motor_delay = 100
 set nav_fw_launch_timeout = 10000
 set nav_fw_launch_climb_angle = 20
 set osd_video_system = NTSC
+set osd_time_alarm = 60
+set osd_alt_alarm = 3000
+set osd_dist_alarm = 30000
 set i2c_speed = 800KHZ
 set name = Voyager
 set vtx_band = 5
