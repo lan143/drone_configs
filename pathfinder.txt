@@ -1,7 +1,7 @@
 # diff
 
 # version
-# INAV/MATEKF722SE 2.5.2 Aug  4 2020 / 10:22:04 (faaedc7cb)
+# INAV/MATEKF722SE 2.5.2 Oct 27 2020 / 16:39:54 (53ef7d2fd)
 # GCC-9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
 
 # start the command batch
@@ -146,7 +146,7 @@ set osd_rssi_alarm = 40
 set osd_time_alarm = 120
 set osd_alt_alarm = 1000
 set osd_dist_alarm = 10000
-set name = Pathfinder
+set name = :WTED
 set vtx_band = 5
 set vtx_channel = 4
 set vtx_power = 4
