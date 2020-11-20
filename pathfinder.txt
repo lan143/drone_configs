@@ -1,7 +1,7 @@
 # diff
 
 # version
-# INAV/MATEKF722SE 2.5.2 Oct 27 2020 / 16:39:54 (53ef7d2fd)
+# INAV/MATEKF722SE 2.5.2 Nov  1 2020 / 13:02:53 (1583641eb)
 # GCC-9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
 
 # start the command batch
@@ -50,13 +50,13 @@ serial 5 2 115200 115200 0 115200
 
 # aux
 aux 0 0 0 1300 2100
-aux 1 1 5 1150 1250
-aux 2 3 5 1350 1650
-aux 3 11 5 1550 1650
-aux 4 10 5 1950 2050
-aux 5 10 3 1400 1600
-aux 6 28 5 1750 1850
-aux 7 13 4 1700 2100
+aux 1 1 4 1150 1250
+aux 2 3 4 1350 1650
+aux 3 11 4 1550 1650
+aux 4 10 4 1950 2050
+aux 5 10 2 1400 1600
+aux 6 28 4 1750 1850
+aux 7 13 3 1700 2100
 
 # adjrange
 
