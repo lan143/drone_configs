@@ -25,6 +25,9 @@ aux 1 1 1 1300 2100 0 0
 aux 2 46 2 1300 2100 0 0
 aux 3 13 3 1300 2100 0 0
 
+# rxfail
+rxfail 5 s 1500
+
 # master
 set acc_calibration = 74,84,368,1
 set align_mag = CW270FLIP
@@ -34,11 +37,15 @@ set rc_smoothing_derivative_type = PT1
 set serialrx_provider = CRSF
 set blackbox_device = NONE
 set dshot_bidir = ON
+set failsafe_switch_mode = STAGE2
+set failsafe_procedure = GPS-RESCUE
 set small_angle = 180
 set gps_provider = UBLOX
 set gps_sbas_mode = AUTO
 set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
+set gps_rescue_initial_alt = 100
+set gps_rescue_min_sats = 7
 set osd_vbat_pos = 2514
 set osd_rssi_pos = 2136
 set osd_flymode_pos = 2115
@@ -67,6 +74,19 @@ set feedforward_transition = 40
 set iterm_relax_cutoff = 10
 set yaw_lowpass_hz = 70
 set throttle_boost_cutoff = 10
+set p_pitch = 51
+set i_pitch = 99
+set d_pitch = 42
+set f_pitch = 105
+set p_roll = 46
+set i_roll = 94
+set d_roll = 39
+set f_roll = 99
+set p_yaw = 33
+set i_yaw = 99
+set f_yaw = 99
+set d_min_roll = 22
+set d_min_pitch = 24
 set ff_interpolate_sp = AVERAGED_3
 set ff_spike_limit = 55
 set ff_smooth_factor = 40
