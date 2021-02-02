@@ -46,6 +46,7 @@ set gps_auto_baud = ON
 set gps_ublox_use_galileo = ON
 set gps_rescue_initial_alt = 100
 set gps_rescue_min_sats = 7
+set gps_rescue_allow_arming_without_fix = ON
 set osd_vbat_pos = 2514
 set osd_rssi_pos = 2136
 set osd_flymode_pos = 2115
