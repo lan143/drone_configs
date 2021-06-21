@@ -1,5 +1,3 @@
-# diff
-
 # version
 # Betaflight / STM32F7X2 (S7X2) 4.2.5 Nov 22 2020 / 18:39:53 (afdac08b3) MSP API: 1.43
 # config: manufacturer_id: ZEEZ, board_name: ZEEZF7, version: 667cde8d, date: 2020-11-04T12:25:01Z
@@ -35,6 +33,9 @@ aux 4 40 0 900 2100 0 0
 rxfail 5 s 1500
 
 # master
+set gyro_lowpass2_hz = 325
+set dyn_lpf_gyro_min_hz = 260
+set dyn_lpf_gyro_max_hz = 650
 set acc_calibration = -146,-39,243,1
 set rc_smoothing_auto_smoothness = 7
 set dshot_bidir = ON
@@ -51,18 +52,24 @@ set osd_current_pos = 2467
 set osd_mah_drawn_pos = 2445
 set osd_warnings_pos = 329
 set debug_mode = GYRO_SCALED
+set gyro_rpm_notch_harmonics = 2
 set gyro_rpm_notch_q = 700
 set name = Enterprise
 
 profile 0
 
 # profile 0
+set dyn_lpf_dterm_min_hz = 91
+set dyn_lpf_dterm_max_hz = 221
 set dyn_lpf_dterm_curve_expo = 7
+set dterm_lowpass2_hz = 195
 set vbat_sag_compensation = 100
+set anti_gravity_gain = 4500
 set iterm_relax_cutoff = 20
 set yaw_lowpass_hz = 100
 set throttle_boost = 7
 set throttle_boost_cutoff = 25
+set auto_profile_cell_count = 6
 set ff_spike_limit = 70
 set ff_smooth_factor = 20
 

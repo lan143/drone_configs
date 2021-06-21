@@ -1,7 +1,7 @@
 # diff
 
 # version
-# INAV/MATEKF405SE 2.6.0 Dec  4 2020 / 12:01:03 (cada68e4)
+# INAV/OMNIBUSF4PRO 2.6.1 Feb 25 2021 / 10:59:49 (64249b1a)
 # GCC-9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
 
 # start the command batch
@@ -14,32 +14,23 @@ batch start
 mmix reset
 
 mmix 0  1.000  0.000  0.000  0.000
-mmix 1  1.000  0.000  0.000  0.000
 
 # servo mix
 smix reset
 
-smix 0 3 0 -50 0 -1
-smix 1 3 1 -50 0 -1
-smix 2 4 0 -50 0 -1
-smix 3 4 1 50 0 -1
+smix 0 1 0 -100 0 -1
+smix 1 2 1 100 0 -1
 
 # servo
 
 # safehome
 
 # logic
-logic 3 0 0 0 0 0 0 0 0
-logic 4 0 1 0 0 0 0 0 0
-logic 5 0 2 0 0 0 0 0 0
 
 # gvar
 
 # feature
-feature THR_VBAT_COMP
 feature MOTOR_STOP
-feature GPS
-feature BLACKBOX
 feature PWM_OUTPUT_ENABLE
 
 # beeper
@@ -47,12 +38,8 @@ feature PWM_OUTPUT_ENABLE
 # map
 
 # serial
-serial 0 1024 57600 115200 0 115200
-serial 2 2048 115200 115200 0 115200
-serial 3 256 115200 115200 0 115200
-serial 4 2 115200 115200 0 115200
-serial 5 256 115200 115200 0 115200
-serial 30 0 115200 115200 0 115200
+serial 0 64 115200 115200 0 115200
+serial 5 2048 115200 115200 0 115200
 
 # led
 
@@ -85,7 +72,7 @@ aux 12 40 6 1750 1850
 #wp 0 invalid
 
 # osd_layout
-osd_layout 0 0 0 3 H
+osd_layout 0 0 0 1 V
 osd_layout 0 1 0 11 V
 osd_layout 0 4 8 6 H
 osd_layout 0 7 0 0 V
@@ -111,86 +98,38 @@ osd_layout 0 40 24 10 V
 osd_layout 0 50 2 4 H
 osd_layout 0 96 25 8 V
 osd_layout 0 97 9 3 H
-osd_layout 0 110 0 1 V
 
 # master
-set gyro_lpf_hz = 40
-set dynamic_gyro_notch_enabled = ON
-set dynamic_gyro_notch_min_hz = 70
-set acc_hardware = MPU6000
-set acc_lpf_hz = 80
-set acczero_x = 91
-set acczero_y = -8
-set acczero_z = -401
-set accgain_x = 4083
-set accgain_y = 4104
-set accgain_z = 3994
-set align_mag = CW270FLIP
+set gyro_sync = OFF
+set acc_hardware = ICM20689
 set mag_hardware = NONE
-set magzero_x = -151
-set magzero_y = -192
-set magzero_z = -768
-set maggain_x = 1918
-set maggain_y = 1488
-set maggain_z = 3073
 set baro_hardware = BMP280
 set pitot_hardware = NONE
+set receiver_type = SERIAL
 set serialrx_provider = CRSF
+set blackbox_rate_denom = 0
 set motor_pwm_rate = 16000
 set motor_pwm_protocol = DSHOT600
-set failsafe_procedure = RTH
+set throttle_idle =  4.000
 set failsafe_mission = OFF
-set align_board_roll = -8
-set align_board_yaw = 2700
-set current_meter_scale = 294
-set model_preview_type = 8
-set 3d_deadband_low = 1425
-set 3d_neutral = 1475
+set platform_type = AIRPLANE
+set model_preview_type = 14
 set small_angle = 180
 set applied_defaults = 3
-set gps_provider = UBLOX7
-set gps_sbas_mode = AUTO
-set gps_ublox_use_galileo = ON
-set nav_extra_arming_safety = OFF
 set nav_wp_radius = 3000
-set nav_min_rth_distance = 5000
-set nav_rth_allow_landing = NEVER
-set nav_rth_alt_mode = MAX
+set nav_rth_allow_landing = FS_ONLY
 set nav_rth_altitude = 5000
 set nav_fw_control_smoothness = 2
-set nav_fw_launch_velocity = 200
-set nav_fw_launch_motor_delay = 100
-set nav_fw_launch_timeout = 10000
-set nav_fw_launch_climb_angle = 20
 set osd_video_system = NTSC
-set osd_rssi_alarm = 65
-set osd_time_alarm = 60
-set osd_alt_alarm = 3000
-set osd_dist_alarm = 30000
-set i2c_speed = 800KHZ
-set debug_mode = GYRO
-set name = Voyager
-set tz_offset = 180
 set vtx_band = 5
-set vtx_power = 4
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
 
 # profile
 profile 1
 
-set fw_p_pitch = 25
-set fw_i_pitch = 18
-set fw_ff_pitch = 84
-set fw_p_roll = 45
-set fw_i_roll = 8
-set fw_ff_roll = 39
-set yaw_lpf_hz = 30
-set heading_hold_rate_limit = 101
-set tpa_rate = 20
-set tpa_breakpoint = 1600
 set rc_expo = 30
 set rc_yaw_expo = 30
-set roll_rate = 28
-set pitch_rate = 14
+set pitch_rate = 15
 set yaw_rate = 9
 
 # battery_profile
